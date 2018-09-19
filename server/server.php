@@ -3,6 +3,11 @@
 
 	error_reporting('E_ALL & ~E_NOTICE');
 
+	//定义秘钥
+	define('Token', 'test');
+	
+	include './checksing.php';
+
 	//处理服务器未知异常
 	try {
 		$pdo = new PDO('mysql:host=localhost;dbname=api;charset=utf8','root','');
