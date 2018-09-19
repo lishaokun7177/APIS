@@ -6,7 +6,10 @@
 	$url = 'http://localhost/apis/server/server.php';
 
 	$curl = new Curl\Curl();
-	$curl->get($url);
+	$curl->post($url, array(
+	    'username' => 'username',
+	    'password' => 'aaa',
+	));
 
 	if ($curl->error) {
 	    echo $curl->error_code;
