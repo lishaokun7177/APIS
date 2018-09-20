@@ -9,9 +9,9 @@
 
 	//生成一个加密签名
 	$sing = setsing($token);
-
+	// echo $sing.'<br>';
 	$url = 'http://localhost/apis/server/server.php?sing='.$sing;
-	echo $url.'<br>';
+	// echo $sing.'<br>';
 
 	$curl = new Curl\Curl();
 	$curl->post($url, array(
